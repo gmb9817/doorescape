@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+	body{
+		background-image:url();
+	}
+</style>
+</head>
+<body>
+<br><br>
+<div align="center"><h2>방탈출 타이머</h2></div>
+<div id="le" align="center"><h1>30:00</h1></div>
+<div align="center"><button onclick="st()">시작</button></div>
+<br>
+<div align="center"><button onclick="ed()">중지</button></div>
+<script>
+let time=1800;
+let id=0;
+function down(){
+	time-=1;
+	document.getElementById("le").innerHTML=`<h1>${Math.floor(time/60)}:${time%60}</h>`;
+}
+function st(){
+	id=setInterval(down,1000);
+}
+function ed(){
+	k=prompt("비밀번호","대전문정중학교");
+	if(k==="8901"){
+		clearInterval(id);
+		time+=3;
+		alert(`축하합니다!! ${Math.floor(time/60)}:${time%60}시간 남기고 끝냈습니다!!`);
+	}
+	else{
+		alert("그러지마요..");
+	}
+}
+</script>
+</body>
+</html>
