@@ -3,14 +3,17 @@
 <head>
 <title></title>
 <style>
-	body{
-		background-image:url();
+body{
+	background-color:#800020;
+	h1{
+		font-size:72px;
 	}
+}
 </style>
 </head>
 <body>
 <br><br>
-<div align="center"><h2>방탈출 타이머</h2></div>
+<div align="center" style="background-color:red"><h2>방탈출 타이머</h2></div>
 <div id="le" align="center"><h1>30:00</h1></div>
 <div align="center"><button onclick="st()">시작</button></div>
 <br>
@@ -29,7 +32,7 @@ function ed(){
 	k=prompt("비밀번호","대전문정중학교");
 	if(k==="8901"){
 		clearInterval(id);
-		time+=3;
+		time+=2;
 		alert(`축하합니다!! ${Math.floor(time/60)}:${time%60}시간 남기고 끝냈습니다!!`);
 	}
 	else{
